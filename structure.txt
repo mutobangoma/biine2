@@ -1,0 +1,187 @@
+﻿├── .firebase\
+│   └── hosting.ZGlzdA.cache
+├── .vscode\
+│   └── launch.json
+├── firestore\
+│   ├── rules\
+│   │   ├── firestore.rules
+│   │   └── storage.rules
+│   ├── scripts\
+│   │   └── seed.js
+│   ├── seed\
+│   │   ├── categories.json
+│   │   ├── locations.json
+│   │   ├── seedCategories.js
+│   │   ├── seedCollections.js
+│   │   └── seedLocations.js
+│   ├── firestore.indexes.json
+│   └── serviceAccount.json
+├── functions\
+│   ├── utils\
+│   │   ├── admin.js
+│   │   └── notifications.js
+│   ├── contactForm.js
+│   ├── createUser.js
+│   ├── index.js
+│   ├── moderateAd.js
+│   ├── notification.js
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── phoneVerification.js
+│   └── recaptcha.js
+├── public\
+│   ├── icons\
+│   │   ├── apple-touch-icon.png
+│   │   ├── email.svg
+│   │   ├── favicon.ico
+│   │   ├── google.svg
+│   │   ├── icon-16.png
+│   │   ├── icon-192.png
+│   │   ├── icon-32.png
+│   │   ├── icon-512.png
+│   │   └── phone.svg
+│   ├── img\
+│   │   ├── cars.jpg
+│   │   ├── furniture.jpg
+│   │   ├── jobs.jpg
+│   │   ├── phones.jpg
+│   │   └── property.jpg
+│   ├── logo.png
+│   ├── manifest.webmanifest
+│   ├── placeholder.png
+│   └── robots.txt
+├── src\
+│   ├── app\
+│   │   ├── loader.js
+│   │   ├── providers.jsx
+│   │   └── routes.jsx
+│   ├── components\
+│   │   ├── ads\
+│   │   │   ├── AdCard.jsx
+│   │   │   ├── AdGrid.jsx
+│   │   │   ├── AdUnit.jsx
+│   │   │   ├── ImageUploader.jsx
+│   │   │   ├── LazyAd.jsx
+│   │   │   └── PostAdForm.jsx
+│   │   ├── auth\
+│   │   │   ├── EmailButton.jsx
+│   │   │   ├── GoogleButton.jsx
+│   │   │   ├── LoginForm.jsx
+│   │   │   ├── OTPInput.jsx
+│   │   │   └── PhoneLogin.jsx
+│   │   ├── common\
+│   │   │   ├── Button.jsx
+│   │   │   └── PostAdButton.jsx
+│   │   ├── messaging\
+│   │   │   ├── Chatlist.jsx
+│   │   │   ├── Chatroom.jsx
+│   │   │   ├── MessageInput.jsx
+│   │   │   └── UserAvatar.jsx
+│   │   ├── store\
+│   │   │   ├── StoreCard.jsx
+│   │   │   ├── StoreDashboard.jsx
+│   │   │   ├── StoreEditor.jsx
+│   │   │   └── SubscriptionPlans.jsx
+│   │   ├── ui\
+│   │   │   ├── Button.jsx
+│   │   │   ├── Card.jsx
+│   │   │   ├── Input.jsx
+│   │   │   ├── Modal.jsx
+│   │   │   └── Spinner.jsx
+│   │   ├── AdsenseBanner.jsx
+│   │   ├── AuthButtons.jsx
+│   │   ├── CategoryCard.jsx
+│   │   ├── ChatBubble.jsx
+│   │   ├── CountryCodeDropdown.jsx
+│   │   ├── ImageGallery.jsx
+│   │   ├── Layout.jsx
+│   │   ├── ListingCard.jsx
+│   │   ├── ListingFilter.jsx
+│   │   ├── Nav.jsx
+│   │   ├── OtpInput.jsx
+│   │   ├── PhoneSignIn.jsx
+│   │   ├── ProtectedRoute.jsx
+│   │   ├── SearchBar.jsx
+│   │   ├── SellerBox.jsx
+│   │   └── SendOtpButton.jsx
+│   ├── context\
+│   │   ├── AdminContext.jsx
+│   │   ├── AdsContext.jsx
+│   │   ├── AuthContext.jsx
+│   │   ├── BoostContext.jsx
+│   │   ├── ChatContext.jsx
+│   │   ├── LocationContext.jsx
+│   │   ├── MessagingContext.jsx
+│   │   ├── NotificationsContext.jsx
+│   │   ├── PaymentsContext.jsx
+│   │   ├── StoreContext.jsx
+│   │   └── SubscriptionContext.jsx
+│   ├── firebase\
+│   │   ├── auth.js
+│   │   ├── config.js
+│   │   ├── firebaseConfig.js
+│   │   ├── firestore.js
+│   │   ├── functionsClient.js
+│   │   ├── recaptcha.js
+│   │   └── storage.js
+│   ├── hooks\
+│   │   ├── useAds.js
+│   │   ├── useAuth.js
+│   │   ├── useCategories.js
+│   │   ├── useGeoLocation.js
+│   │   ├── useMessaging.js
+│   │   ├── useStore.js
+│   │   └── useSubscription.js
+│   ├── layout\
+│   │   ├── CategoryStrip.jsx
+│   │   ├── Footer.jsx
+│   │   └── Navbar.jsx
+│   ├── pages\
+│   │   ├── About.jsx
+│   │   ├── AdDetails.jsx
+│   │   ├── AdList.jsx
+│   │   ├── Auth.jsx
+│   │   ├── CategoryAds.jsx
+│   │   ├── HelpCenter.jsx
+│   │   ├── Home.jsx
+│   │   ├── Messages.jsx
+│   │   ├── Notfound.jsx
+│   │   ├── PostAd.jsx
+│   │   ├── Privacy.jsx
+│   │   ├── StoreDashboard.jsx
+│   │   ├── Storefront.jsx
+│   │   ├── Subscription.jsx
+│   │   └── Terms.jsx
+│   ├── services\
+│   │   ├── adService.js
+│   │   ├── messagingService.js
+│   │   ├── storeService.js
+│   │   └── userService.js
+│   ├── styles\
+│   │   ├── globals.css
+│   │   └── theme.css
+│   ├── utils\
+│   │   ├── constants.js
+│   │   ├── formatters.js
+│   │   ├── recaptcha.js
+│   │   ├── validators.js
+│   │   └── verifyToken.js
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .env
+├── .env.example
+├── .env.local
+├── .firebaserc
+├── .gitignore
+├── allfiles.txt
+├── firebase.json
+├── firestore-debug.log
+├── index.html
+├── package.json
+├── package-lock.json
+├── postcss.config.cjs
+├── README.md
+├── structure.txt
+├── tailwind.config.cjs
+└── vite.config.js

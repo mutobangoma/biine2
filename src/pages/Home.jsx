@@ -1,56 +1,56 @@
+// src/pages/Home.jsx
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
-import CategoryCard from "../components/CategoryCard";
-import ListingCard from "../components/ListingCard";
+import AdUnit from "../components/ads/AdUnit";
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
-    <div className="space-y-12">
+    <div className="max-w-6xl mx-auto px-4">
+      <section className="bg-gradient-to-r from-green-600 to-lime-500 py-10 text-center">
+        <h1 className="text-2xl md:text-3xl font-bold">Buy & Sell in Zambia</h1>
+        <p className="text-gray-600 mt-2">Simple classifieds for your local area.</p>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-lime-500 text-white h-32 flex items-center">
-
-  <div className="max-w-4xl mx-auto px-6 text-center">
-    <h1 className="text-3xl md:text-4xl font-extrabold leading-snug mb-3">
-      Buy & Sell in Zambia — Fast, Safe & Easy
-    </h1>
-    <p className="text-base opacity-90">
-      Find cars, phones, property and more near you.
-    </p>
-  </div>
-</section>
-
-
-      {/* Popular Categories */}
-      <section className="max-w-7xl mx-auto px-6">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800">
-          Popular Categories
-        </h2>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
-          <CategoryCard title="Cars" image="/img/cars.jpg" />
-          <CategoryCard title="Property" image="/img/property.jpg" />
-          <CategoryCard title="Phones" image="/img/phones.jpg" />
-          <CategoryCard title="Jobs" image="/img/jobs.jpg" />
-          <CategoryCard title="Furniture" image="/img/furniture.jpg" />
-          <CategoryCard title="Pets" image="/img/pets.jpg" />
+        <div className="mt-6 max-w-xl mx-auto">
+          <SearchBar onSubmit={(v) => navigate(`/ads?search=${encodeURIComponent(v)}`)} />
         </div>
       </section>
 
-      {/* Featured Listings */}
-      <section className="max-w-7xl mx-auto px-6">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800">
-          Featured Listings
-        </h2>
+      {/* Horizontal Ad Below Hero */}
+      <div className="max-w-7xl mx-auto px-6">
+        <AdUnit 
+          adSlot="2146914081"
+          format="auto"
+          style={{ display: "block", margin: "20px auto" }}
+        />
+      </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <ListingCard />
-          <ListingCard />
-          <ListingCard />
-          <ListingCard />
-        </div>
+      {/* Category strip placeholder */}
+      <section className="mt-8">
+        {/* keep your existing CategoryStrip component; it renders beneath navbar */}
       </section>
 
+      <section className="mt-8">
+        <h2 className="text-lg font-semibold mb-3">Featured</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="border rounded p-3">Featured ad</div>
+          <div className="border rounded p-3">Featured ad</div>
+          <div className="border rounded p-3">Featured ad</div>
+          <div className="border rounded p-3">Featured ad</div>
+        </div>
+
+        {/* Inline Ad under category grid */}
+        <div className="mt-8">
+          <AdUnit
+            adSlot="3785081773"
+            format="fluid"
+            layoutKey="-gw-3+1f-3d+2z"
+            style={{ display: "block" }}
+          />
+        </div>
+      </section>
     </div>
   );
 }

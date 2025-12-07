@@ -1,0 +1,16 @@
+[
+  {
+    "id": "lusaka",
+    "name": "Lusaka",
+    "lat": null,
+    "lng": null,
+    "sublocations": ["Kabwata", "Woodlands", "Chalala"]
+  },
+  {
+    "id": "copperbelt",
+    "name": "Copperbelt",
+    "lat": null,
+    "lng": null,
+    "sublocations": ["Kitwe", "Ndola", "Chingola"]
+  }
+]

@@ -1,29 +1,23 @@
-// src/pages/PostAd.jsx
 import React, { useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "../firebaseConfig";
-import { useAuth } from "../context/AuthContext";
+import { auth, db } from "../firebase/firebaseConfig";
+import { useAuthContext } from "../context/AuthContext";
 
-import ImageUploader from "../components/ImageUploader"; // <-- ADD THIS
+import ImageUploader from "../components/ads/ImageUploader";
+import AdUnit from "../components/ads/AdUnit"; // <-- ADD THIS
 
 export default function PostAd() {
-  const { user } = useAuth();
-
-  // --- MULTI-STEP FLOW ---
+  const { user } = useAuthContext();
   const [step, setStep] = useState(1);
 
-  // --- FORM DATA ---
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
   const [desc, setDesc] = useState("");
 
-  // --- IMAGES (NOW STORED AS URLs) ---
   const [imageURLs, setImageURLs] = useState([]);
-
   const [loading, setLoading] = useState(false);
 
-  // --- FINAL SUBMIT ---
   const handleSubmit = async () => {
     try {
       setLoading(true);
@@ -33,14 +27,14 @@ export default function PostAd() {
         category,
         price,
         desc,
-        images: imageURLs, // <-- images already uploaded
+        images: imageURLs,
         userId: user.uid,
         createdAt: serverTimestamp(),
         status: "active",
       });
 
       setLoading(false);
-      setStep(5); // success page
+      setStep(5);
 
     } catch (err) {
       console.error(err);
@@ -55,22 +49,25 @@ export default function PostAd() {
 
         <h2 className="text-xl font-semibold mb-4">Post a Free Ad</h2>
 
-        {/* ---------------- STEP 1 ---------------- */}
+        {/* STEP 1 */}
         {step === 1 && (
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">1. Choose a Category</h3>
 
-            <select
-              className="input"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            >
-              <option value="">Select category</option>
-              <option value="cars">Cars & Vehicles</option>
-              <option value="property">Property</option>
-              <option value="electronics">Electronics</option>
-              <option value="jobs">Jobs</option>
-            </select>
+            <option value="vehicles">Vehicles</option>
+            <option value="property">Property</option>
+            <option value="electronics">Electronics</option>
+            <option value="jobs">Jobs</option>
+            <option value="fashion">Fashion</option>
+            <option value="pets">Pets</option>
+
+
+            {/* AD BELOW STEP 1 */}
+            <AdUnit
+              adSlot="2146914081"
+              format="auto"
+              style={{ display: "block", marginTop: 10 }}
+            />
 
             <button
               className="btn btn-primary"
@@ -81,7 +78,7 @@ export default function PostAd() {
           </div>
         )}
 
-        {/* ---------------- STEP 2 ---------------- */}
+        {/* STEP 2 */}
         {step === 2 && (
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">2. Ad Details</h3>
@@ -113,6 +110,14 @@ export default function PostAd() {
               />
             </div>
 
+            {/* INLINE AD */}
+            <AdUnit
+              adSlot="3785081773"
+              format="fluid"
+              layoutKey="-gw-3+1f-3d+2z"
+              style={{ display: "block", marginTop: 10 }}
+            />
+
             <div className="flex justify-between">
               <button className="btn" onClick={() => setStep(1)}>← Back</button>
               <button
@@ -125,7 +130,7 @@ export default function PostAd() {
           </div>
         )}
 
-        {/* ---------------- STEP 3 ---------------- */}
+        {/* STEP 3 */}
         {step === 3 && (
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">3. Upload Photos</h3>
@@ -150,6 +155,14 @@ export default function PostAd() {
               </div>
             )}
 
+            {/* INLINE AD */}
+            <AdUnit
+              adSlot="3785081773"
+              format="fluid"
+              layoutKey="-gw-3+1f-3d+2z"
+              style={{ display: "block", marginTop: 10 }}
+            />
+
             <div className="flex justify-between mt-4">
               <button className="btn" onClick={() => setStep(2)}>← Back</button>
               <button
@@ -163,7 +176,7 @@ export default function PostAd() {
           </div>
         )}
 
-        {/* ---------------- STEP 4: REVIEW ---------------- */}
+        {/* STEP 4 */}
         {step === 4 && (
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Review Your Ad</h3>
@@ -181,6 +194,13 @@ export default function PostAd() {
               ))}
             </div>
 
+            {/* MULTIPLEX AD */}
+            <AdUnit
+              adSlot="3070765905"
+              format="autorelaxed"
+              style={{ display: "block", marginTop: 15 }}
+            />
+
             <button className="btn" onClick={() => setStep(3)}>← Back</button>
 
             <button
@@ -193,11 +213,18 @@ export default function PostAd() {
           </div>
         )}
 
-        {/* ---------------- SUCCESS PAGE ---------------- */}
+        {/* SUCCESS */}
         {step === 5 && (
-          <div className="text-center py-10">
+          <div className="text-center py-10 space-y-4">
             <h3 className="text-xl font-semibold text-green-600">Your ad is live!</h3>
             <p className="text-gray-600 mt-2">You can now view it on the marketplace.</p>
+
+            {/* MULTIPLEX AT SUCCESS */}
+            <AdUnit
+              adSlot="3070765905"
+              format="autorelaxed"
+              style={{ display: "block", marginTop: 20 }}
+            />
           </div>
         )}
       </div>

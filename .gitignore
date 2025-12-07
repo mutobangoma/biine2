@@ -51,6 +51,7 @@ coverage/
 
 #serviceAccountKey
 serviceAccountKey.json
+serviceAccount.json
 
 # Playwright
 /test-results/

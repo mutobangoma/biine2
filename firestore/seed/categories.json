@@ -1,0 +1,224 @@
+[
+  {
+    "id": "vehicles",
+    "name": "Vehicles",
+    "subcategories": [
+      "Cars",
+      "Motorcycles",
+      "Trucks",
+      "Buses",
+      "Vans",
+      "Spare Parts",
+      "Boats",
+      "Bicycles"
+    ]
+  },
+  {
+    "id": "electronics",
+    "name": "Electronics",
+    "subcategories": [
+      "Phones",
+      "Tablets",
+      "Laptops",
+      "Desktops",
+      "TVs",
+      "Audio Equipment",
+      "Cameras",
+      "Accessories"
+    ]
+  },
+  {
+    "id": "fashion",
+    "name": "Fashion",
+    "subcategories": [
+      "Men's Clothing",
+      "Women's Clothing",
+      "Shoes",
+      "Bags",
+      "Jewelry",
+      "Watches",
+      "Kids Clothing"
+    ]
+  },
+  {
+    "id": "home_garden",
+    "name": "Home & Garden",
+    "subcategories": [
+      "Furniture",
+      "Appliances",
+      "Decor",
+      "Garden Supplies",
+      "Tools",
+      "Home Improvement"
+    ]
+  },
+  {
+    "id": "jobs",
+    "name": "Jobs",
+    "subcategories": [
+      "Full-time",
+      "Part-time",
+      "Internships",
+      "Freelance",
+      "Remote"
+    ]
+  },
+  {
+    "id": "property",
+    "name": "Property",
+    "subcategories": [
+      "Houses for Sale",
+      "Apartments for Sale",
+      "Houses for Rent",
+      "Apartments for Rent",
+      "Land",
+      "Commercial Property"
+    ]
+  },
+  {
+    "id": "services",
+    "name": "Services",
+    "subcategories": [
+      "Home Services",
+      "Beauty & Health",
+      "Education & Tuition",
+      "Automotive Services",
+      "Event Planning",
+      "IT & Web Services"
+    ]
+  },
+  {
+    "id": "baby_kids",
+    "name": "Baby & Kids",
+    "subcategories": [
+      "Clothing",
+      "Toys",
+      "Furniture",
+      "Baby Gear",
+      "Books"
+    ]
+  },
+  {
+    "id": "sports",
+    "name": "Sports",
+    "subcategories": [
+      "Gym Equipment",
+      "Bicycles",
+      "Balls",
+      "Sportswear",
+      "Outdoor Gear"
+    ]
+  },
+  {
+    "id": "pets",
+    "name": "Pets",
+    "subcategories": [
+      "Dogs",
+      "Cats",
+      "Birds",
+      "Fish",
+      "Pet Accessories"
+    ]
+  },
+  {
+    "id": "books",
+    "name": "Books",
+    "subcategories": [
+      "Fiction",
+      "Non-Fiction",
+      "Textbooks",
+      "Comics",
+      "Magazines"
+    ]
+  },
+  {
+    "id": "music",
+    "name": "Music",
+    "subcategories": [
+      "Instruments",
+      "Albums",
+      "Accessories",
+      "Audio Equipment"
+    ]
+  },
+  {
+    "id": "computing",
+    "name": "Computing",
+    "subcategories": [
+      "Hardware",
+      "Software",
+      "Peripherals",
+      "Networking"
+    ]
+  },
+  {
+    "id": "gaming",
+    "name": "Gaming",
+    "subcategories": [
+      "Consoles",
+      "Games",
+      "Accessories",
+      "VR Gear"
+    ]
+  },
+  {
+    "id": "collectibles",
+    "name": "Collectibles",
+    "subcategories": [
+      "Coins & Stamps",
+      "Trading Cards",
+      "Antiques",
+      "Memorabilia"
+    ]
+  },
+  {
+    "id": "agriculture",
+    "name": "Agriculture",
+    "subcategories": [
+      "Livestock",
+      "Seeds & Plants",
+      "Farming Equipment",
+      "Produce"
+    ]
+  },
+  {
+    "id": "health_beauty",
+    "name": "Health & Beauty",
+    "subcategories": [
+      "Skincare",
+      "Haircare",
+      "Makeup",
+      "Wellness Products",
+      "Fitness Equipment"
+    ]
+  },
+  {
+    "id": "office",
+    "name": "Office & Industrial",
+    "subcategories": [
+      "Office Equipment",
+      "Furniture",
+      "Industrial Tools",
+      "Safety Equipment"
+    ]
+  },
+  {
+    "id": "tickets",
+    "name": "Tickets",
+    "subcategories": [
+      "Concerts",
+      "Sports",
+      "Theatre",
+      "Events"
+    ]
+  },
+  {
+    "id": "miscellaneous",
+    "name": "Miscellaneous",
+    "subcategories": [
+      "Gift Cards",
+      "Services",
+      "Other Items"
+    ]
+  }
+]
