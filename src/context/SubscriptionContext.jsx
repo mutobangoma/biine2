@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from "react";
 import { useSubscription } from "../hooks/useSubscription";
-import { useAuthContext as useAuth } from "./AuthContext"; // your existing auth
+import { useAuth } from "./AuthContext"; // your existing auth
 
 const SubscriptionContext = createContext();
 

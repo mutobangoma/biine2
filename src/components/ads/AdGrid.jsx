@@ -4,7 +4,7 @@ import AdCard from "./AdCard";
 export default function AdGrid({ ads }) {
   if (!ads || ads.length === 0) {
     return (
-      <p classwName="text-center text-gray-500 mt-8">
+      <p className="text-center text-gray-500 mt-8">
         No ads found.
       </p>
     );

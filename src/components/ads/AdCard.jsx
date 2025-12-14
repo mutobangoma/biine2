@@ -1,26 +1,29 @@
+// src/components/ads/AdCard.jsx
 import React from "react";
 import { Link } from "react-router-dom";
+import { getAdImage } from "../../utils/getAdImage";
 
 export default function AdCard({ ad }) {
   return (
     <Link
       to={`/ad/${ad.id}`}
-      className="block bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden border"
+      className="relative block bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden border"
     >
       {/* Thumbnail */}
       <div className="w-full h-40 bg-gray-100">
-        {ad.images?.[0] ? (
-          <img
-            src={ad.images[0]}
-            alt={ad.title}
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <div className="flex items-center justify-center h-full text-gray-400">
-            No Image
-          </div>
-        )}
+        <img
+          src={getAdImage(ad)}
+          alt={ad.title}
+          className="w-full h-full object-cover"
+        />
       </div>
+
+      {/* Demo badge */}
+      {ad.isDemo && (
+        <span className="absolute top-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded">
+          Demo
+        </span>
+      )}
 
       {/* Content */}
       <div className="p-3">
@@ -34,7 +37,9 @@ export default function AdCard({ ad }) {
           </p>
         )}
 
-        <p className="text-xs text-gray-500">Category: {ad.category}</p>
+        <p className="text-xs text-gray-500">
+          Category: {ad.category}
+        </p>
       </div>
     </Link>
   );

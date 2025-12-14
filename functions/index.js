@@ -7,7 +7,7 @@ import { phoneVerification } from "./phoneVerification.js";
 
 export {
   createUser,
-  verifyCaptcha,
+  verifyCaptcha as verifyRecaptchaToken,
   pushPersonalNotification,
   contactForm,
   moderateAd,

@@ -1,3 +1,4 @@
+// src/hooks/useGeoLocation.js
 import { useState, useEffect } from "react";
 
 export default function useGeoLocation(apiKey) {

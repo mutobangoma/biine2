@@ -17,6 +17,7 @@ import { AdsProvider } from "./context/AdsContext";
 import { BoostProvider } from "./context/BoostContext";
 import { LocationProvider } from "./context/LocationContext";
 import { PaymentsProvider } from "./context/PaymentsContext";
+import { HelmetProvider } from "react-helmet-async";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -24,7 +25,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <StoreProvider>
-        
+        <HelmetProvider>
           <SubscriptionProvider>
             <NotificationsProvider>
               <AdsProvider>
@@ -46,7 +47,7 @@ root.render(
               </AdsProvider>
             </NotificationsProvider>
           </SubscriptionProvider>
-        
+        </HelmetProvider>
       </StoreProvider>
     </BrowserRouter>
   </React.StrictMode>

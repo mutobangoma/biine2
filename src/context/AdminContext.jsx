@@ -7,7 +7,7 @@ import {
   doc,
   deleteDoc,
 } from "firebase/firestore";
-import { useAuthContext as useAuth } from "./AuthContext";
+import { useAuth } from "./AuthContext";
 
 const AdminContext = createContext();
 

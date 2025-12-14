@@ -1,4 +1,4 @@
-// src/firebaseConfig.js
+// src/firebase/firebaseConfig.js
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
@@ -28,7 +28,7 @@ const firebaseConfig = {
   clientId: "170873146813-u8p10bpk8euu2nh5hjl3420biso93fq0.apps.googleusercontent.com",
 
 };
-
+export default firebaseConfig;
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 

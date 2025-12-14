@@ -8,6 +8,7 @@ import CategoryStrip from "./layout/CategoryStrip";
 
 // Pages
 import Home from "./pages/Home";
+import Stores from "./pages/Stores";
 import PostAd from "./pages/PostAd";
 import AdDetails from "./pages/AdDetails";
 import AdList from "./pages/AdList";
@@ -22,7 +23,7 @@ import HelpCenter from "./pages/HelpCenter";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Notfound from "./pages/Notfound";
-
+import CategoryGrid from "./components/CategoryGrid";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
@@ -34,9 +35,11 @@ export default function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/stores" element={<Stores />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/ads" element={<AdList />} />
           <Route path="/ads/:category" element={<CategoryAds />} />
+          <Route path="/categories" element={<CategoryGrid />} />
           <Route path="/ad/:id" element={<AdDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/help" element={<HelpCenter />} />
@@ -44,7 +47,7 @@ export default function App() {
           <Route path="/privacy" element={<Privacy />} />
 
           <Route
-            path="/post"
+            path="/post-ad"
             element={
               <ProtectedRoute>
                 <PostAd />

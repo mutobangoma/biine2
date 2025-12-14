@@ -7,6 +7,5 @@ export const moderateAd = functions.firestore
     console.log("Ad created:", data);
 
     // placeholder moderation logic
-
     return true;
   });

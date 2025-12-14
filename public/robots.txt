@@ -1,11 +1,4 @@
-# Allow all search engines to index the site
 User-agent: *
-Disallow:
+Allow: /
 
-# Optional: block specific folders
-# Disallow: /admin/
-# Disallow: /private/
-# Disallow: /firebase/
-
-# Sitemap (update URL if you have a sitemap)
-Sitemap: https://www.biine.app/sitemap.xml
+Sitemap: https://biine.app/sitemap.xml

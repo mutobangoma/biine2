@@ -1,23 +1,29 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-export default function AdUnit({ adSlot }) {
+export default function AdUnit({ adSlot, style, format, layoutKey }) {
+  const ref = useRef(null);
+
   useEffect(() => {
+    if (!ref.current) return;
+    if (ref.current.dataset.loaded) return;
+
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
+      ref.current.dataset.loaded = "true";
     } catch (e) {
-      console.error("AdSense error:", e);
+      console.warn("AdSense skipped:", e.message);
     }
   }, []);
 
   return (
     <ins
+      ref={ref}
       className="adsbygoogle"
-      style={{ display: "block" }}
-      data-ad-client="pub-5658209077209925"
+      style={style || { display: "block" }}
+      data-ad-client="ca-pub-5658209077209925"
       data-ad-slot={adSlot}
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-      data-adtest="on"
+      data-ad-format={format}
+      data-ad-layout-key={layoutKey}
     />
   );
 }

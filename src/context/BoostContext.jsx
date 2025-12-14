@@ -10,7 +10,7 @@ import {
   where,
   onSnapshot,
 } from "firebase/firestore";
-import { useAuthContext as useAuth } from "./AuthContext";
+import { useAuth } from "./AuthContext";
 
 const BoostContext = createContext();
 
